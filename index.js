@@ -3,7 +3,7 @@ const displayValorActual = document.getElementById('valor-actual');
 const botonesNumeros = document.querySelectorAll('.numero');
 const botonesOperadores = document.querySelectorAll('.operador');
 const operadorIgual = document.querySelectorAll('.operadorigual');
-const botonBorrarTodo = document.querySelector('.borrar');
+const botonBorrarTodo = document.querySelector('.borrar-todo');
 
 const display = new Display(displayValorAnterior, displayValorActual);
 

@@ -16,6 +16,7 @@ body {
 
 .container {
     display: flex;
+    margin: 80px auto;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -60,25 +61,17 @@ body {
 
 button {
     cursor: pointer;
-    margin: 5px;
-    padding: 0;
-    border-radius: 8px;
+    margin: 4px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: #c9c9c9;
     font-size: 2em;
     font-weight: bold;
-    border: none;
     background-color: #ffffff;
 }
 
-button:active {
-    background-color: #006f54;
-}
-
-button:focus {
-    outline: none;
-}
-
 .calculadora p {
-    color: #fff;
+    color: #ffffff;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -87,17 +80,19 @@ button:focus {
     text-align: center;
 }
 
-.borrar{
+.borrar-todo {
     background-color: rgb(0, 255, 17);
+    border-color: #2ace53;
 }
 
-.borrar-uno {
+.borrar {
     grid-column: span 2;
 }
 
-.operadorigual{
+.operadorigual {
     grid-column: span 2;
-    background-color: rgb(255, 149, 0);
+    background-color: rgb(255, 169, 48);
+    border-color: #d47509;
 }
 
 .display {
