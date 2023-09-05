@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "DS-Digital-Bold";
+    src: url("fonts/DS-DIGIB.TTF");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #568dc8;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: 190px repeat(6, 75px);
+    background-color: #5f5f5f;
+    padding: 30px 30px 0 30px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 0 #3d3d3d;
+    max-width: 580px;
+}
+
+.calculadora::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 8px;
+    border-radius: 2px;
+    background-color: #3d3d3d;
+    transform: rotate(45deg);
+    margin-left: -30px;
+    margin-top: 637px;
+    z-index: -1;
+}
+
+.calculadora::before {
+    content: "";
+    position: absolute;
+    margin-left: 497px;
+    margin-top: -23px;
+    border-radius: 10px 0;
+    width: 25px;
+    height: 8px;
+    background-color: #3d3d3d;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 8px;
+    font-size: 2em;
+    font-weight: bold;
+    border: none;
+    background-color: #ffffff;
+}
+
+button:active {
+    background-color: #006f54;
+}
+
+button:focus {
+    outline: none;
+}
+
+.calculadora p {
+    color: #fff;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    grid-row: span 1;
+    grid-column: span 4;
+    text-align: center;
+}
+
+.borrar{
+    background-color: rgb(0, 255, 17);
+}
+
+.borrar-uno {
+    grid-column: span 2;
+}
+
+.operadorigual{
+    grid-column: span 2;
+    background-color: rgb(255, 149, 0);
+}
+
+.display {
+    font-family: "DS-Digital-Bold";
+    grid-column: 1 / -1;
+    padding: 15px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #b9e9bd;
+    border-radius: 20px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+}
+
+#valor-actual {
+    font-size: 5em;
+}
+
+#valor-anterior {
+    font-size: 3em;
+}
