@@ -20,8 +20,8 @@ class Display {
     }
 
     borrarTodo() {
-        this.valorActual = '';
-        this.valorAnterior = '';
+        this.valorActual = 0;
+        this.valorAnterior = 0;
         this.tipoOperacion = undefined;
         this.imprimirValores();
     }
