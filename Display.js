@@ -34,7 +34,9 @@ class Display {
     computar(tipo) {
         if (this.tipoOperacion !== 'igual') this.calcular();
         this.tipoOperacion = tipo;
-        this.valorAnterior = this.valorActual;
+        if (this.valorActual !== 0) {
+            this.valorAnterior = this.valorActual || this.valorAnterior;
+        } else { this.valorAnterior = '0'; }
         if (this.valorActual === '0' && this.tipoOperacion === 'igual') {
             this.valorActual = '0';
         } else { this.valorActual = ''; }
