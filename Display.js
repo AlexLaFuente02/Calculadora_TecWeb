@@ -32,14 +32,12 @@ class Display {
     }
 
     computar(tipo) {
-        if (this.tipoOperacion !== 'igual') this.calcular();
+        if (this.tipoOperacion !== 'igual') {
+            this.calcular();
+            this.valorAnterior = this.valorActual;
+        }
         this.tipoOperacion = tipo;
-        if (this.valorActual !== 0) {
-            this.valorAnterior = this.valorActual || this.valorAnterior;
-        } else { this.valorAnterior = '0'; }
-        if (this.valorActual === '0' && this.tipoOperacion === 'igual') {
-            this.valorActual = '0';
-        } else { this.valorActual = ''; }
+        if (this.valorActual !== '') this.valorActual = '0';
         this.imprimirValores();
     }
 
