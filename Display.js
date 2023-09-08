@@ -38,6 +38,7 @@ class Display {
         }
         this.tipoOperacion = tipo;
         if (this.valorActual !== '') this.valorActual = '0';
+        if (isNaN(this.valorAnterior)) this.valorAnterior = 'Syntax Error';
         this.imprimirValores();
     }
 
